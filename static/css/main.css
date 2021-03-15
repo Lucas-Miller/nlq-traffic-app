@@ -1,0 +1,8 @@
+html, body, .intro {
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  font: 500;
+  color: black;
+  background-color: rgba(0,0,0, 0.5);
+}
+
