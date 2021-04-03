@@ -57,7 +57,6 @@ def find_matches_scann(image_embeddings, query_embedding, k=9, normalize=True):
     2, anisotropic_quantization_threshold=0.2).reorder(100).build()
 
     # Use ScaNN to find top neighbors
-    #results = searcher.search_batched(query_embedding)
     results = searcher.search_batched(query_embedding)
     return results[0][0]
 
@@ -68,8 +67,6 @@ def get_query():
     print(nl_query)
     # Create Embeddings of query
     query_embedding = text_encoder(tf.convert_to_tensor([nl_query]))
-    #query_embedding_normalized = tf.math.l2_normalize(query_embedding, axis=1)
-
     # Use scann module in python to finds closest embeddings
     # return those images 
     # display images 

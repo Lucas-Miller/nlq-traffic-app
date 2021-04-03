@@ -31,8 +31,7 @@
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <div class="navbar-nav">
-            <a href="#" class="nav-item nav-link active">Home</a>
-            <a href="#" class="nav-item nav-link">Placeholder</a>
+            <a href="/" class="nav-item nav-link active">Home</a>
           </div>
 
         </div>
@@ -53,7 +52,7 @@
                         placeholder="Enter Natural Language Query..." name="nl_query"/>
                       </form>
                     </div>
-                    <button type="button" class="btn btn-primary">
+                    <button type="submit" class="btn btn-primary" action="{{ url_for('get_query') }}" method="post">
                       <i class="bi bi-search"></i>
                     </button>
                   </div>

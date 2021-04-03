@@ -3,6 +3,13 @@
     source venvName/bin/activate
 
 -Install Flask through pip with your venv active
+-Download models and place in models folder in root of project
+-Vision encoder: https://drive.google.com/drive/folders/1Byok0ZCFlqfExe7bfAZ-FTUiJsAxlKdQ?usp=sharing
+-Text encoder: https://drive.google.com/drive/folders/1-JqvysxGkAzZC0xLKFB8rpN8lKKeS3ct?usp=sharing
+
+-Download image data set and place in static/image_data
+-Image dataset: https://drive.google.com/drive/folders/1OA6NF5IyulbXYZ6cilIS65QB9BJANvI2?usp=sharing
+
 -After Setting up your environment, start your development server
 
 -To run the dev server:
