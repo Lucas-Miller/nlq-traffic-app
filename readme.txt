@@ -22,3 +22,19 @@
 -For more instructions check out this tutorial: 
     https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3
 
+-To run the data pipeline
+
+Start data pipeline (faust): faust -A stream_processor worker -l info
+Start Spark Direct Streaming: python3 spark-direct-kafka.py  
+
+
+Start Zookeeper: zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties
+Start Kafka Server: kafka-server-start /usr/local/etc/kafka/server.properties
+
+
+Send data to topic via terminal as a test: faust -A stream_processor send @greet "Hello Faust"
+
+Apache Kafka process the data from topics which receives data from a producer (Tesla Cars) and then streams it to Apache Spark which ingests the data from Kafka
+
+
+Apache Kafka processes all the data as it arrives in real time where Apache Spark then uses a micro batch processing model by splitting the incoming stream from Kafka into small batches for further processing. Our ETL (Extract Transform Load) processing is done on Apache Spark. 
