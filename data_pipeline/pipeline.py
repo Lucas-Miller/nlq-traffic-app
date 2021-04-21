@@ -10,8 +10,8 @@ spark = SparkSession.builder \
             .getOrCreate()
 
 
-aws_id = 'AKIARHN7WIAKS26PZG2Z'
-aws_key = 'qjcEIRoHMz/fzawnxJuaKXockg1En1jkb6/FGXeM'
+aws_id = ''
+aws_key = ''
 
 spark._jsc.hadoopConfiguration().set("fs.s3n.awsAccessKeyId", aws_id)
 spark._jsc.hadoopConfiguration().set("fs.s3n.awsSecretAccessKey", aws_key)
